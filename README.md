@@ -482,14 +482,6 @@ Semanal is a personal project, but it is also the finance app I actually use.
 
 It connects to real financial accounts and handles sensitive data, so I keep the production source repository private.
 
-This repository still lets someone:
-
-* See what I built
-* Understand how the application works
-* Look at some of the engineering decisions behind it
-* Explore the architecture
-* **Try the actual application through Guest Login**
-
 ## About
 
 I designed and built Semanal independently.
@@ -497,13 +489,3 @@ I designed and built Semanal independently.
 It started from a problem I had myself and has grown alongside my needs as a college student managing my own budget.
 
 Some of those needs are especially relevant to me as an international student, but they can apply to other students too.
-
-Semanal has also become a place where I can apply and explore:
-
-* Full-stack development
-* Databases
-* Distributed systems
-* Identity and access management
-* Cybersecurity
-* Cryptography
-* Observability
