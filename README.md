@@ -2,7 +2,7 @@
 
 A multi-currency personal finance tracker focused on financial observability and control over the short and medium term.
 
-[**Try Semanal Live →**](https://semanal.dev)
+[**Try Semanal Live**](https://semanal.dev)
 
 No account is required. Select **Guest Login** on the sign-in page to explore Semanal with demo financial data.
 
