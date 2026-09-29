@@ -401,28 +401,9 @@ I use:
 * **Vitest** for unit and integration tests
 * **Playwright** for browser-level testing
 * TypeScript checking
-* Linting
-* Production builds
-
-## Try It
-
-Semanal is live at **[semanal.dev](https://semanal.dev)**.
-
-* No account is required
-* Choose **Guest Login**
-* Explore the app using sample financial data
-* No real user financial information is exposed
 
 ## Why Is the Source Private?
 
 Semanal is a personal project, but it is also the finance app I actually use.
 
 It connects to real financial accounts and handles sensitive data, so I keep the production source repository private.
-
-## About
-
-I designed and built Semanal independently.
-
-It started from a problem I had myself and has grown alongside my needs as a college student managing my own budget.
-
-Some of those needs are especially relevant to me as an international student, but they can apply to other students too.
