@@ -363,69 +363,6 @@ API routes are used where actual HTTP endpoints make sense, including:
 * Webhooks
 * Scheduled tasks
 
-## Some Engineering Decisions
-
-### Incremental Balances
-
-Instead of recalculating an account's entire transaction history every time its balance is needed:
-
-* Transactions update balances incrementally
-* Connected accounts are reconciled with institution-reported balances
-* Historical balance charts are reconstructed from the ledger
-
-This avoids maintaining another full balance-history dataset that also needs to stay synchronized.
-
-### Concurrency-Safe Balance Updates
-
-Encrypting account balances created an interesting problem.
-
-Before encryption, Postgres could atomically increment a numeric balance. Once the balance itself became encrypted, it could no longer simply add a number to it.
-
-Semanal now:
-
-1. Locks the account row
-2. Decrypts the balance
-3. Calculates the new balance
-4. Encrypts it again
-5. Writes it back inside the same transaction
-
-Operations touching multiple accounts acquire locks in a consistent order to avoid deadlocks.
-
-### Lazy Work Instead of Cron Jobs Everywhere
-
-I try not to schedule work just because something eventually needs to happen.
-
-Examples:
-
-* Goal periods are finalized when the Goals page is next opened
-* Stale Plaid connections can catch up after user activity
-* Exchange-rate preloading stays scheduled because it actually depends on time
-
-### Currency Normalization
-
-Every transaction keeps:
-
-* Its original amount
-* Its original currency
-* A normalized representation for aggregation
-
-Semanal can then sum values consistently and convert the final result into the selected display currency instead of repeatedly converting every transaction.
-
-### Keeping Business Logic Testable
-
-Where possible, financial logic is kept separate from Next.js and the database.
-
-That includes:
-
-* Goal calculations
-* Fund calculations
-* Currency conversion
-* Categorization
-* CSV processing
-* Cryptographic primitives
-
-These can be tested as normal functions without starting the entire application.
-
 ## Tech Stack
 
 | Area             | Technology             |
