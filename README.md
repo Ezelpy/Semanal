@@ -1,6 +1,6 @@
 # Semanal
 
-**A multi-currency personal finance tracker focused on financial observability and control over the short and medium term.**
+A multi-currency personal finance tracker focused on financial observability and control over the short and medium term.
 
 [**Try Semanal Live →**](https://semanal.dev)
 
@@ -21,7 +21,7 @@ After trying a lot of personal finance apps, none really matched what I needed. 
 * Better visibility into my finances over the **short and medium term**
 * Goals and budgeting that matched how I actually manage money
 
-So I built **Semanal**.
+So I built Semanal.
 
 It has the usual features you would expect from a personal finance app, but it has also grown alongside my needs as a college student learning how to manage a real budget.
 
